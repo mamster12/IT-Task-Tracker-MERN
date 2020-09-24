@@ -1,0 +1,49 @@
+{
+    "logs": [
+        {
+            "message": "CCMS error",
+            "attention": true,
+            "tech": "John Doe",
+            "date": "2020-03-26T16:42:05.337Z",
+            "id": 1
+        },
+        {
+            "id": 2,
+            "message": "change VOIP headset on station F19",
+            "attention": false,
+            "tech": "John Doe",
+            "date": "2020-03-27T10:45:11.228Z"
+        },
+        {
+            "id": 3,
+            "message": "add searchLogs2",
+            "attention": false,
+            "tech": "Jennivere Lawrence",
+            "date": "2020-03-27T10:51:43.342Z"
+        },
+        {
+            "message": "Something Important",
+            "attention": true,
+            "tech": "Jennivere Lawrence",
+            "date": "2020-09-20T16:16:24.455Z",
+            "id": 4
+        }
+    ],
+    "techs": [
+        {
+            "id": 1,
+            "firstName": "John",
+            "lastName": "Doe"
+        },
+        {
+            "id": 2,
+            "firstName": "Sam",
+            "lastName": "Smith"
+        },
+        {
+            "firstName": "Jennivere",
+            "lastName": "Lawrence",
+            "id": 4
+        }
+    ]
+}
