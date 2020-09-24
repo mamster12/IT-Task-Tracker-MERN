@@ -53,7 +53,6 @@ const AddLogModal = ({ addLog, getLogs }) => {
                             name="message"
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
-                            autoComplete="off"
                         />
                         <label htmlFor="message" className="active">
                             Log Message
