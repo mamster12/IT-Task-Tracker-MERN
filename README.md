@@ -1,4 +1,4 @@
-# IT-Task-Tracker-MERN
+# IT-TASK-TRACKER-MERN
 
 MERN Stack web app
 ADD Daily Task for IT Department
