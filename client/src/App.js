@@ -20,6 +20,10 @@ const App = () => {
     useEffect(() => {
         // Init Materialize JS
         M.AutoInit();
+        const elems = document.querySelectorAll('.fixed-action-btn');
+        M.FloatingActionButton.init(elems, {
+            hoverEnabled: false
+        });
     });
 
     return (
