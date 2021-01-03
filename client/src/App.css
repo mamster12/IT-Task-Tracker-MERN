@@ -17,11 +17,12 @@ html,
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
-    background-image: url(./img/bg2.jpg);
+    min-height: 100vh;
+    background-image: url(./img/main_bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .margin-top-five {
