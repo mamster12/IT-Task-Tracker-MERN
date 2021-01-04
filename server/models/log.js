@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
-// const moment = require('moment-timezone');
-// const dateLocal = moment().tz('Asia/Taipei');
+const mongoose = require("mongoose");
+const moment = require("moment-timezone");
+const dateLocal = moment.tz.setDefault("Asia/Taipei");
 // const validator = require('validator');
 // const bcrypt = require('bcryptjs');
 // const jwt = require('jsonwebtoken');
@@ -23,11 +23,11 @@ const logSchema = new mongoose.Schema({
     },
     date: {
         // type: String,
-        // default: new Date().toLocaleString('en-US', {
-        //     timeZone: 'Asia/Manila'
+        // default: new Date().toLocaleString("en-US", {
+        //     timeZone: "Asia/Manila"
         // })
         type: Date,
-        default: Date.now
+        default: dateLocal
     }
 });
 
@@ -38,6 +38,6 @@ const logSchema = new mongoose.Schema({
 //     foreignField: 'owner'
 // });
 
-const Log = mongoose.model('Log', logSchema);
+const Log = mongoose.model("Log", logSchema);
 
 module.exports = Log;

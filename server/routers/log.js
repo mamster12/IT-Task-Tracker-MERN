@@ -1,11 +1,11 @@
-const express = require('express');
+const express = require("express");
 const router = new express.Router();
 
 // load log model
-const Log = require('../models/log');
+const Log = require("../models/log");
 
 // GET LOGS
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
     try {
         const logs = await Log.find({}).sort({ date: -1 });
         res.status(200).send(logs);
@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
 });
 
 // ADD LOGS
-router.post('/', async (req, res) => {
+router.post("/", async (req, res) => {
     const log = new Log(req.body);
     try {
         await log.save();
@@ -26,7 +26,7 @@ router.post('/', async (req, res) => {
 });
 
 // UPDATE LOG
-router.patch('/:id', async (req, res) => {
+router.patch("/:id", async (req, res) => {
     const _id = req.params.id;
     const updates = Object.keys(req.body);
 
@@ -43,12 +43,12 @@ router.patch('/:id', async (req, res) => {
 
 // DELETE LOG
 // DELETE A TASK
-router.delete('/:id', async (req, res) => {
+router.delete("/:id", async (req, res) => {
     const _id = req.params.id;
     try {
         const log = await Log.findOneAndDelete({ _id });
         if (!log) {
-            return res.status(404).send('Task Not Found');
+            return res.status(404).send("Task Not Found");
         }
         res.status(200).send(task);
     } catch (error) {
